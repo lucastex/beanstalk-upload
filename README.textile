@@ -1,0 +1,51 @@
+h2. Beanstalk-upload script
+
+I'm getting a lot of trouble trying to upload wars to Beanstalk using its console. Specially large wars (larger than 50MB).
+So, I've build this simple script that upload your war to Beanstalk and generates one version for it.
+
+h3. Usage
+
+You have to have a _credentials.properties_ file in the same directory you're running the script. 
+The default AWS 'credentials.properties' file as below
+
+<pre>
+accessKey = AKIAAIEQF6SPAKSE5BN5
+secretKey = J7fa9akja879FGA308JAHA749jha7va83akaf931
+</pre>
+
+After that, just run the beanstalk.groovy with the usage shown below:
+
+<pre>
+Usage: groovy beanstalkUpload.groovy <path_to_war> <application_name> <application_version_label>
+</pre>
+
+Don't forget to add jars/* files into your classpath.
+
+h3. Output
+
+Output will be thrown in your console, as this example:
+
+<pre>
+	[2011/02/18 14:10:08] [sde] Loading 'credentials.propeties' file
+	[2011/02/18 14:10:08] [sde] Loaded AWS credentials
+	[2011/02/18 14:10:08] [sde] Creating s3 bucket 'sde-d27c0fd0-8b57-44ff-8692-82233496e0a8' to hold application file
+	[2011/02/18 14:16:59] [sde] Uploading to sde-d27c0fd0-8b57-44ff-8692-82233496e0a8/20110218141010-sde-0.1.war: [InProgress] - 48955392 of 48956935 (100%)  
+	[2011/02/18 14:17:00] [sde] Creating application version...
+	[2011/02/18 14:17:03] [sde] Done!
+	[2011/02/18 14:17:03] [sde] App: sde
+	[2011/02/18 14:17:03] [sde] Version: 0.5
+	[2011/02/18 14:17:03] [sde] S3 Bucket: sde-d27c0fd0-8b57-44ff-8692-82233496e0a8
+	[2011/02/18 14:17:03] [sde] War file:  20110218141010-sde-0.1.war
+	[2011/02/18 14:17:03] [sde] Version created at: 2011/02/18 14:17:02
+</pre>
+	
+(AWS SDK Logs are turned off, for esthetic purposes)
+
+h3. Improvements?
+
+Feel free to fork the repo, do your changes and send me a pull request
+
+h3. Contact
+
+Lucas Teixeira
+@lucastex
