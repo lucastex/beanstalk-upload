@@ -21,6 +21,12 @@ Usage: groovy beanstalkUpload.groovy <path_to_war> <application_name> <applicati
 
 Don't forget to add jars/* files into your classpath.
 
+*Example*
+
+<pre>
+groovy beanstalkUpload.groovy ../sde-0.1.war sde
+</pre>
+
 h3. Output
 
 Output will be thrown in your console, as this example:
