@@ -1,3 +1,16 @@
+@GrabResolver(name='central', root='http://repo1.maven.org/maven2')
+@GrabResolver(name='javanet', root='http://download.java.net/maven/2')
+@Grab(group='com.amazonaws', module='aws-java-sdk', version='1.1.6')
+@Grab(group='commons-logging', module='commons-logging', version='1.1.1')
+@Grab(group='commons-codec', module='commons-codec', version='1.4')
+@Grab(group='commons-httpclient', module='commons-httpclient', version='3.1')
+@Grab(group='javax.mail', module='mail', version='1.4.3')
+@Grab(group='org.codehaus.jackson', module='jackson-core-asl', version='1.4.3')
+@Grab(group='stax', module='stax', version='1.2.0')
+@Grab(group='stax', module='stax-api', version='1.0.1')
+
+
+
 import org.apache.commons.logging.LogFactory
 
 import com.amazonaws.auth.AWSCredentials
