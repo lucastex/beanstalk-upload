@@ -19,12 +19,15 @@ After that, just run the beanstalk.groovy with the usage shown below:
 Usage: groovy beanstalkUpload.groovy <path_to_war> <application_name> <application_version_label>
 </pre>
 
-Don't forget to add jars/* files into your classpath.
+*Attention*
+
+The script uses Grape to resolve dependencies (thanks @berngp), so, the first time you run the script it will take a while to initialize (approx 5 minutes in my 15mb/s internet). So, be patient. 
+Further times, the script will run immediately.
 
 *Example*
 
 <pre>
-groovy beanstalkUpload.groovy ../sde-0.1.war sde
+groovy beanstalkUpload.groovy ../sde-0.1.war sde 0.1-beta
 </pre>
 
 h3. Output
