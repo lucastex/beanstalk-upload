@@ -122,7 +122,7 @@ if (args.size() != 3) {
 }
 
 def fileToUpload = new File(args[0])
-def appName = args[1]
+def appName = args[1].toLowerCase()
 def appVersion = args[2]
 
 if (!fileToUpload.exists()) {
